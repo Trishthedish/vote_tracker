@@ -1,0 +1,25 @@
+
+@font-fact {
+  font-family:'Coustard';
+  src: url('http://fonts.googleapis.com/css?family=Coustard' rel='stylesheet' type='text/css');
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Coustard';
+  font-size: 70px;
+  color: #FFFF00;              /*color: yellow*/
+}
+
+body, choose {
+  background: #00B7BE;        /*bg color: turquoise*/
+  color: #FF3399;             /*color: pink*/
+  font-family:sans-serif;
+  text-align: center;
+  margin: 0;
+}
