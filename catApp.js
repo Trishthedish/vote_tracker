@@ -1,30 +1,40 @@
-$(function () {
+var CatPic = function(catImgName, winner, looser) {
+    this.catImgName = catImgName;
+    this.winner = winner;
+    this.looser = looser;
+    this.vote = 0;
+};
 
-
-var catPic = [
-  'cat1.jpg',
-  'cat2.jpg',
-  'cat3.jpg',
-  'cat4.jpg',
-  'cat5.jpg',
-  'cat6.jpg',
-  'cat7.jpg',
-  'cat8.jpg',
-  'cat9.jpg',
-  'cat10.jpg',
-  'cat11.jpg',
-  'cat12.jpg',
-  'cat13.jpg',
-  'cat14.jpg',
-  ];
-
-$('<img src="vote_tracker/images/catPics/' + "cat" +catPic[Math.floor(Math.random() * catPic.length)] + '"">').appendTo('#leftOpp');
-
-{
-
-
+// when you put this in ajax you will not need 9-12
+var cat = [];
+for(i = 1; i < 15; i++) {
+  cat.push(new CatPic("cat" + i + ".jpg",0,0));
 }
 
-} );
+function Tracker(objArray) {
+this.objArray = objArray;
+}
+Tracker.prototype.pickCat = function() {
+var indx = function(ary){return Math.floor(Math.random() * ary.length + 1);
+};
+var leftOpp = this.objArray[indx(this.objArray)];
+  do {
+    rightOpp = this.objArray[indx(this.objArray)];
+  } while(leftOpp === rightOpp);
+    var render = function(leftOpp, rightOpp) {
+      console.log(leftOpp.catImgName);
+      console.log(rightOpp.catImgName);
+document.getElementById('leftOpp').innerHTML = "<img src=./images/catPics/" +
+rightOpp.catImgName + ">";
+document.getElementById('rightOpp').innerHTML = "<img src=./images/catPics/" +
+leftOpp.catImgName + ">";
+  };
+  render(leftOpp,rightOpp);
+};
+
+
+var tracker = new Tracker(cat);
+tracker.pickCat();
+
 
 
