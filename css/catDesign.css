@@ -18,8 +18,32 @@ h1 {
 
 body, choose {
   background: #00B7BE;        /*bg color: turquoise*/
-  color: #FF3399;             /*color: pink*/
+  color: #FF3399;
+  font-size: 30px;            /*color: pink*/
   font-family:sans-serif;
   text-align: center;
   margin: 0;
 }
+
+.right, .left {
+  border-width: 12px;
+  border-style: solid;
+  color: #99FFCC;  /*color: aqua greens*/
+  padding: 3px;
+
+}
+.winner{
+  border-width: 75px;
+  border-style: solid;
+  color: #64FE2E;
+  padding: 0;
+  border-style: rounded
+
+}
+
+#banner {
+  text-
+
+}
+
+/*winner is orange. #FFBF00, yellow FFFF00*, bright green: #64FE2E/
